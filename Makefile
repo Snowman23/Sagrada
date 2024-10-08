@@ -1,6 +1,6 @@
-CC = gcc               # Compiler
-CFLAGS = -Wall          # Compilation flags (show warnings)
-TARGET = testing.c     # Output program name
+CC = gcc               
+CFLAGS = -Wall         
+TARGET = testing.c    
 
 all: $(TARGET)
 
