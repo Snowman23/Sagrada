@@ -469,7 +469,6 @@ void addDieToWindow(PlayerWindow *player, Dice chosenDie){
         return;
     }
 
-    //adjacent=Neighbouring(player,row,col,chosenDie);
     if(adjacent==1){
         // Check if the chosen cell is empty
         if (value != 0 && (color == 'R' || color == 'Y' || color == 'G' || color == 'B' || color == 'P'))
@@ -496,7 +495,6 @@ void addDieToWindow(PlayerWindow *player, Dice chosenDie){
         }
     }
     else{
-        //printf("not adjacent to any die\n");
         addDieToWindow(player, chosenDie);
     }
 
