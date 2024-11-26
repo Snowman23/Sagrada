@@ -20,9 +20,6 @@ jobs:
         run: |
           gcc -o Sagrada testing.c
 
-      - name: Run compiled program
-        run: Sagrada.exe
-
       - name: Run the compiled program
         run: ./Sagrada
 
