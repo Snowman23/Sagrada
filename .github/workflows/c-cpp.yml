@@ -16,10 +16,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Compile C program
+      - name: Install GCC
         run: |
-          gcc -o Sagrada testing.c
+          choco install -y msys2
+          refreshenv
+          ridk install 3
+          pacman -S --noconfirm mingw-w64-x86_64-gcc
 
-      - name: Run the compiled program
-        run: ./Sagrada
+      - name: Compile C program
+        run: gcc -o Sagrada testing.c
 
