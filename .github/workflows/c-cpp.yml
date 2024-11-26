@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: Compile C Program (Windows)
 
 on:
   push:
@@ -10,30 +10,19 @@ on:
 
 jobs:
   build:
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-
-    runs-on: ${{ matrix.os }}
+    runs-on: windows-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install build tools
-        run: |
-          if [[ $RUNNER_OS == 'Linux' ]]; then
-            sudo apt-get update && sudo apt-get install -y build-essential;
-          elif [[ $RUNNER_OS == 'macOS' ]]; then
-            brew update && brew install gcc;
-          fi
-
       - name: Compile C program
         run: |
-          gcc -o program_name source_file.c
+          gcc -o Sagrada testing.c
 
+      - name: Run compiled program
+        run: Sagrada.exe
 
       - name: Run the compiled program
-        run: ./program_name
+        run: ./Sagrada
 
