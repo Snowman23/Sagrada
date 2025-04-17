@@ -1,30 +1,35 @@
-# Sagrada
+# 🎲 Sagrada (C)
 
-This repository contains a C program that emulates the board game Sagrada.
-Sagrada is a game in which colored dies are rollend and placed in the players "windows" that have different restrictions.
-This project developed my skills in multi-dimensionals arrays, pointers 
+A C implementation of the board game **Sagrada**, built as a terminal-based project for practicing low-level programming and game logic.
 
-## Prerequisites
+## 📌 About the Project
 
-To compile and run the program, you'll need:
+This project is a console-based version of the colorful dice-drafting game *Sagrada*. It mimics core gameplay mechanics such as:
 
-- A C compiler (e.g., GCC)
+- Window pattern selection
+- Dice placement with color/number constraints
+- Round structure with public and private objectives
+- Tool card usage
 
-## Game rules
+The game logic and state management are written entirely in C, making this a fun exploration of data structures, pointers, and memory management.
 
-Game start: You will be asked to input the no. of players and choose a "window" for each, private goals will be shared ,giving extra points for using a specific color for each player, togheter with the public goals allowing player to perform various actions at the price of helper gems, afterwards the round begins.
-Windows have various dificulties, higher dificulty windows provide more helper gems used for the public goals.
-Each round a no. of dies is rolled, each player gets to choose 2 dies/round in a certain order. Players may take a dice and place it or just pass.
-Public 
+## 🧠 Key Features
 
-   -Fisrt dice must be placed in a corner and all following dies must be placent adjacent to another.
-   -Dies with same color and number may not be place adjacent to eachother (diagonals dont count).
-   -After each round the leftover dies are discarded and drawn new ones
+- 🧩 Pattern grid & constraints
+- 🎲 Dice drafting system
+- 🃏 Tool card mechanics
+- 📜 Public and private objectives
+- 👥 Basic multiplayer turn handling (local)
 
-Game end: After the last round the points of the dies are talied up on each row/column added with private objective points and remaining helper gems, most points win. In case of a tie I too am curious.
+## 🛠 Built With
 
-### **Using GCC**
-1. Clone the repository:
+- **Language:** C
+- **Compilation:** `gcc`
+- **Terminal UI:** ASCII rendering
+
+## 🚀 Getting Started
+
+1. Clone the repo:
    ```bash
-   git clone https://github.com/Snowman23/Sagrada
+   git clone https://github.com/Snowman23/Sagrada.git
    cd Sagrada
