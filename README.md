@@ -27,7 +27,7 @@ The game logic and state management are written entirely in C, making this a fun
 - **Compilation:** `gcc`
 - **Terminal UI:** ASCII rendering
 
-##🤓 Motivation
+## 🤓 Motivation
 Sagrada was a way to combine my love for board games with my interest in systems-level programming. It helped solidify concepts like:
 
 - Memory handling in C
